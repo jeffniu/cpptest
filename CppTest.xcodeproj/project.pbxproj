@@ -13,6 +13,10 @@
 		71C36DA91B3E8C1000317F3C /* calc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DA71B3E8C1000317F3C /* calc.cpp */; };
 		71C36DAC1B3E983700317F3C /* calc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DA71B3E8C1000317F3C /* calc.cpp */; };
 		71C36DAD1B3E983700317F3C /* calc.h in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DA81B3E8C1000317F3C /* calc.h */; };
+		71C36DB01B3EA31C00317F3C /* RMQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DAE1B3EA31C00317F3C /* RMQ.cpp */; };
+		71C36DB11B3EA3B800317F3C /* RMQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DAE1B3EA31C00317F3C /* RMQ.cpp */; };
+		71C36DB21B3EA3B800317F3C /* RMQ.h in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DAF1B3EA31C00317F3C /* RMQ.h */; };
+		71C36DB51B3EAFCC00317F3C /* RandomGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71C36DB31B3EAFCC00317F3C /* RandomGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +48,11 @@
 		71C36DA51B3E8AAA00317F3C /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../gtest.framework; sourceTree = "<group>"; };
 		71C36DA71B3E8C1000317F3C /* calc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calc.cpp; sourceTree = "<group>"; };
 		71C36DA81B3E8C1000317F3C /* calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calc.h; sourceTree = "<group>"; };
+		71C36DAE1B3EA31C00317F3C /* RMQ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RMQ.cpp; sourceTree = "<group>"; };
+		71C36DAF1B3EA31C00317F3C /* RMQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMQ.h; sourceTree = "<group>"; };
+		71C36DB31B3EAFCC00317F3C /* RandomGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomGenerator.cpp; sourceTree = "<group>"; };
+		71C36DB41B3EAFCC00317F3C /* RandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomGenerator.h; sourceTree = "<group>"; };
+		71FCC1951B48DB3D00A6AC82 /* TestRMQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRMQ.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,8 @@
 				71C36D911B3E862500317F3C /* main.cpp */,
 				71C36DA71B3E8C1000317F3C /* calc.cpp */,
 				71C36DA81B3E8C1000317F3C /* calc.h */,
+				71C36DAE1B3EA31C00317F3C /* RMQ.cpp */,
+				71C36DAF1B3EA31C00317F3C /* RMQ.h */,
 			);
 			path = CppTest;
 			sourceTree = "<group>";
@@ -98,6 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				71C36D9E1B3E865500317F3C /* main.cpp */,
+				71C36DB31B3EAFCC00317F3C /* RandomGenerator.cpp */,
+				71C36DB41B3EAFCC00317F3C /* RandomGenerator.h */,
+				71FCC1951B48DB3D00A6AC82 /* TestRMQ.h */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C36DB01B3EA31C00317F3C /* RMQ.cpp in Sources */,
 				71C36DA91B3E8C1000317F3C /* calc.cpp in Sources */,
 				71C36D921B3E862500317F3C /* main.cpp in Sources */,
 			);
@@ -188,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C36DB51B3EAFCC00317F3C /* RandomGenerator.cpp in Sources */,
+				71C36DB11B3EA3B800317F3C /* RMQ.cpp in Sources */,
+				71C36DB21B3EA3B800317F3C /* RMQ.h in Sources */,
 				71C36DAC1B3E983700317F3C /* calc.cpp in Sources */,
 				71C36DAD1B3E983700317F3C /* calc.h in Sources */,
 				71C36D9F1B3E865500317F3C /* main.cpp in Sources */,
@@ -277,7 +295,8 @@
 		71C36D961B3E862500317F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -285,7 +304,8 @@
 		71C36D971B3E862500317F3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -293,7 +313,8 @@
 		71C36DA11B3E865500317F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -310,7 +331,8 @@
 		71C36DA21B3E865500317F3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

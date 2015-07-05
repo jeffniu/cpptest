@@ -9,11 +9,8 @@
 #include <iostream>
 #include "calc.h"
 #include "gtest/gtest.h"
+#include "TestRMQ.h"
 
-TEST(Calc, Add) {
-    Calc calc;
-    EXPECT_EQ(2, calc.add(1, 1));
-}
 
 int main(int argc, char * argv[]) {
     // insert code here...
